@@ -74,27 +74,79 @@ body, html {
     margin: 20px auto; /* Center the divider horizontally */
 }
 
-.solutions {
-    background-color: black;
-    color: white;
-    padding: 50px 20px;
+/* Section Styling */
+.priorities {
     text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
 }
 
-.solutions h2 {
+.priorities h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
-    color: aqua;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.solution {
-    display: inline-block;
-    width: 30%;
-    margin: 20px;
+.priorities p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Carousel Container */
+.priority-carousel {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px; /* Spacing between the boxes */
+    padding: 10px;
+    scroll-snap-type: x mandatory; /* Snap scrolling */
+    scrollbar-width: none; /* Hide scrollbar for clean look */
+}
+
+.priority-carousel::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Webkit browsers */
+}
+
+/* Individual Boxes */
+.priority-item {
+    flex: 0 0 80%; /* Box takes up 80% of the viewport width */
+    max-width: 400px; /* Medium-sized box */
+    height: 300px; /* Adjust height as needed */
+    background: #e6f7ff; /* Replace with a background image or color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: relative;
+    scroll-snap-align: center; /* Centers each box while scrolling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.priority-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Shadow intensifies */
+}
+
+/* Box Content */
+.priority-content {
     padding: 20px;
-    border: 1px solid gray;
-    border-radius: 10px;
-    background-color: #222;
+    color: #333;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Read More Button */
+.read-more {
+    align-self: flex-end;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #0056b3;
 }
 
 .impact {
