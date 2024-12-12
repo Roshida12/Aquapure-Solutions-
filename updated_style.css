@@ -89,22 +89,29 @@ body, html {
     background-color: #222;
 }
 
-.impact, .shareholders {
+.impact {
     background: url('https://i.imgur.com/g8Twi3b.jpg') no-repeat center center/cover;
     color: white;
     padding: 50px 20px;
     text-align: center;
 }
 
-.impact h2, .shareholders h2 {
-    color: aqua;
+.impact h2 {
     font-size: 2rem;
+    color: aqua;
 }
 
-.impact p, .shareholders p {
-    margin: 20px 0;
+.shareholders {
+    background: black; /* Adjust background if needed */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
 }
 
+.shareholders h2 {
+    font-size: 2rem;
+    color: aqua;
+}
 .contact {
     background: black;
     color: white;
