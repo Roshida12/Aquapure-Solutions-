@@ -22,13 +22,12 @@ body, html {
 }
 
 .logo {
-    height: 25px; /* Reduce the height further to make it smaller */
-    width: auto;  /* Maintain aspect ratio */
-    margin-right: 10px; /* Adjust spacing between the logo and nav links */
-    display: inline-block; /* Keep it inline with the nav links */
-    vertical-align: middle; /* Align it with the nav links */
+    height: 35px; /* Small enough to fit nicely, adjust as needed */
+    width: auto;  /* Keeps the image's aspect ratio intact */
+    margin-right: 15px; /* Adds some space between the logo and navigation links */
+    display: inline-block; /* Keeps it inline with navigation links */
+    vertical-align: middle; /* Aligns the logo with the nav links */
 }
-
 .nav a {
     color: white;
     text-decoration: none;
