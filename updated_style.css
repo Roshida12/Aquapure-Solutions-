@@ -74,17 +74,18 @@ body, html {
     margin: 20px auto; /* Center the divider horizontally */
 }
 
-/* Section Styling */
+/* Our Priorities Section Styling */
 .priorities {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f9f9f9;
+    background-color: #f0f9ff;
+    position: relative;
 }
 
 .priorities h2 {
     font-size: 2rem;
-    color: #333;
     margin-bottom: 10px;
+    color: #333;
 }
 
 .priorities p {
@@ -96,57 +97,75 @@ body, html {
 .priority-carousel {
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 20px; /* Spacing between the boxes */
+    gap: 20px;
     padding: 10px;
-    scroll-snap-type: x mandatory; /* Snap scrolling */
-    scrollbar-width: none; /* Hide scrollbar for clean look */
+    scroll-snap-type: x mandatory; /* Enables smooth snapping */
+    scrollbar-width: none; /* Hides scrollbar */
 }
 
 .priority-carousel::-webkit-scrollbar {
-    display: none; /* Hides scrollbar in Webkit browsers */
+    display: none; /* Hides scrollbar in WebKit browsers */
 }
 
-/* Individual Boxes */
+/* Priority Item Styling */
 .priority-item {
-    flex: 0 0 80%; /* Box takes up 80% of the viewport width */
-    max-width: 400px; /* Medium-sized box */
-    height: 300px; /* Adjust height as needed */
-    background: #e6f7ff; /* Replace with a background image or color */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    flex: 0 0 80%; /* Box size: 80% of the screen width */
+    max-width: 400px;
     position: relative;
-    scroll-snap-align: center; /* Centers each box while scrolling */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    scroll-snap-align: center; /* Centers each box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow */
+    cursor: pointer;
 }
 
-.priority-item:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Shadow intensifies */
+.priority-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
-/* Box Content */
 .priority-content {
-    padding: 20px;
-    color: #333;
-    text-align: left;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Read More Button */
-.read-more {
-    align-self: flex-end;
-    color: #007bff;
-    text-decoration: none;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: white;
+    font-size: 1.5rem;
     font-weight: bold;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a slight overlay */
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-.read-more:hover {
-    color: #0056b3;
+/* Navigation Buttons */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.carousel-nav.left {
+    left: 10px;
+}
+
+.carousel-nav.right {
+    right: 10px;
+}
+
+.carousel-nav:hover {
+    background-color: #1f7f36;
 }
 
 .impact {
