@@ -28,35 +28,43 @@
     <div class="page-divider"></div>
 
     <!-- Solutions Section -->
-    <section id="priorities" class="priorities">
-    <h2>Our Priorities</h2>
-    <p>Swipe left or right to explore each priority and learn more.</p>
+    <!-- Our Priorities Section -->
+<section id="priorities" class="priorities">
+    <h2>Our <span style="color: #28a745;">Priorities</span></h2>
+    <p>Swipe left or right to explore each priority and click to learn more.</p>
     <div class="priority-carousel">
         <!-- Priority 1 -->
-        <div class="priority-item">
+        <div class="priority-item" onclick="navigateToPage('priority1.html')">
+            <img src="https://i.postimg.cc/X7CfGrCc/IMG-5331-removebg-preview.png" alt="Water Priority">
             <div class="priority-content">
-                <h3>Priority 1</h3>
-                <p>Substitute this with your text in the future.</p>
-                <a href="priority1.html" class="read-more">Read More →</a>
+                <h3>Water</h3>
             </div>
         </div>
         <!-- Priority 2 -->
-        <div class="priority-item">
+        <div class="priority-item" onclick="navigateToPage('priority2.html')">
+            <img src="your-image2.jpg" alt="Health Priority">
             <div class="priority-content">
-                <h3>Priority 2</h3>
-                <p>Substitute this with your text in the future.</p>
-                <a href="priority2.html" class="read-more">Read More →</a>
+                <h3>Health</h3>
             </div>
         </div>
         <!-- Priority 3 -->
-        <div class="priority-item">
+        <div class="priority-item" onclick="navigateToPage('priority3.html')">
+            <img src="your-image3.jpg" alt="Education Priority">
             <div class="priority-content">
-                <h3>Priority 3</h3>
-                <p>Substitute this with your text in the future.</p>
-                <a href="priority3.html" class="read-more">Read More →</a>
+                <h3>Education</h3>
+            </div>
+        </div>
+        <!-- Priority 4 -->
+        <div class="priority-item" onclick="navigateToPage('priority4.html')">
+            <img src="your-image4.jpg" alt="Sustainability Priority">
+            <div class="priority-content">
+                <h3>Sustainability</h3>
             </div>
         </div>
     </div>
+    <!-- Navigation Buttons -->
+    <button class="carousel-nav left" onclick="scrollLeft()">←</button>
+    <button class="carousel-nav right" onclick="scrollRight()">→</button>
 </section>
 
     <!-- Impact Section -->
@@ -107,6 +115,22 @@
         </form>
         <p>Email: info@aquapuresolutions.com | Phone: <a href="tel:+14165551234">+1 (416) 555-1234</a></p>
     </section>
+
+<script>
+    function scrollLeft() {
+        const carousel = document.querySelector('.priority-carousel');
+        carousel.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+        const carousel = document.querySelector('.priority-carousel');
+        carousel.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+
+    function navigateToPage(url) {
+        window.location.href = url; // Redirects to the specified URL
+    }
+</script>
 
 </body>
 </html>
