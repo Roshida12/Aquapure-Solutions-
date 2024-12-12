@@ -68,7 +68,8 @@ body, html {
 }
 
 .page-divider {
-    height: 2px;
+    height: 1px;
+    width: 100px;
     background: white;
 }
 
