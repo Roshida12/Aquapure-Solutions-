@@ -69,13 +69,13 @@ body, html {
 
 .page-divider {
     height: 1px;
-    width: 1px solid white;
+    width: 50%;
     background: white;
 }
 
 .solutions {
     background-color: black;
-    color: aqua;
+    color: white;
     padding: 50px 20px;
     text-align: center;
 }
@@ -83,6 +83,7 @@ body, html {
 .solutions h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    color: aqua;
 }
 
 .solution {
