@@ -70,8 +70,6 @@ body, html {
 .page-divider {
     height: 1px; /* Thickness of the divider */
     background: white; /* Color of the divider */
-    width: 1px; /* Set the length explicitly, e.g., 300px */
-    margin: 20px auto; /* Center the divider horizontally */
 }
 
 /* Our Priorities Section Styling */
@@ -169,7 +167,7 @@ body, html {
 }
 
 .impact {
-    background: url('https://imgur.com/yHKjpTB') no-repeat center center/cover;
+    background: url('https://imgur.com/g8Twi3b') no-repeat center center/cover;
     color: white;
     padding: 50px 20px;
     text-align: center;
