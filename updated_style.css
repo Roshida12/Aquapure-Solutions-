@@ -140,30 +140,34 @@ body, html {
 }
 
 /* Navigation Buttons */
-.carousel-btn {
-    background-color: aqua;
-    color: black;
-    border: none;
-    font-size: 2rem;
-    padding: 10px;
-    border-radius: 50%;
+.carousel-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    z-index: 1000;
+    font-size: 1.5rem;
+    z-index: 10;
 }
 
-.left-btn {
-    left: 10px; /* Adjust based on your layout */
+.carousel-nav.left {
+    left: 10px;
 }
 
-.right-btn {
-    right: 10px; /* Adjust based on your layout */
+.carousel-nav.right {
+    right: 10px;
 }
 
-.carousel-btn:hover {
-    background-color: #00bcd4; /* Slightly darker aqua on hover */
+.carousel-nav:hover {
+    background-color: #1f7f36;
 }
 
 /* Our Impact Section */
