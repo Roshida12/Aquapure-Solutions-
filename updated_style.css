@@ -70,7 +70,7 @@ body, html {
 .page-divider {
     height: 1px; /* Thickness of the divider */
     background: white; /* Color of the divider */
-    width: 200px; /* Set the length explicitly, e.g., 300px */
+    width: 1px; /* Set the length explicitly, e.g., 300px */
     margin: 20px auto; /* Center the divider horizontally */
 }
 
