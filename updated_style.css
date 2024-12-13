@@ -144,8 +144,8 @@ body, html {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: aqua; /* Buttons set to aqua blue */
-    color: white;
+    background-color: green; /* Buttons set to aqua blue */
+    color: black;
     border: none;
     border-radius: 50%;
     height: 40px;
