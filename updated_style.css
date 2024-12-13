@@ -171,27 +171,82 @@ body, html {
 }
 
 /* Our Impact Section */
-/* Our Impact Section */
 .impact {
-    background: url('https://i.postimg.cc/Wz3xzj4C/B2-C48252-27-B9-4-A4-D-8-F0-D-569-F24-FD98-F2.jpg') no-repeat center center/cover;
-    height: 30vh; /* Reduce height to 60% of the viewport */ 
-    width: auto; /* Full width */
-    background-size: cover; /* Ensures the image covers the section */
-    background-position: center; /* Centers the image */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white; /* Text color for contrast */
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
     text-align: center;
-    padding: 20px;
-    position: relative;
 }
 
 .impact h2 {
+    color: aqua;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.impact p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.impact-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.stat {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.stat h3 {
     font-size: 2rem;
+    margin-bottom: 10px;
     color: aqua;
 }
+
+.stat p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.cta {
+    margin-top: 40px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: black;
+    background-color: aqua;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #00bcd4;
+}
+
+
+
 
 .shareholders {
     background: black; /* Adjust background if needed */
