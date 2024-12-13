@@ -200,8 +200,8 @@ body, html {
 }
 
 .stat {
-    background-color: white;
-    color: black;
+    background-color: gray;
+    color:white;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
