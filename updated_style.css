@@ -231,61 +231,10 @@ body, html {
     background-color: #00bcd4;
 }
 
-/* Donation Form Styling */
-.donation-form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+00bcd4;
 }
 
-.donation-form label {
-    display: block;
-    margin-bottom: 5px;
-    color: white;
-}
 
-.donation-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: white;
-    font-size: 1rem;
-}
-
-.donation-form .submit-button {
-    background-color: aqua;
-    color: black;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.donation-form .submit-button:hover {
-    background-color: #00bcd4;
-}
-
-.back-button {
-    margin-top: 20px;
-    background-color: aqua;
-    color: black;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.back-button:hover {
-    background-color: #00bcd4;
-}
 
 /* Our Impact Section */
 .impact {
