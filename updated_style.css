@@ -171,8 +171,9 @@ body, html {
 }
 
 /* Donate Section */
+/* Donate Section */
 .donate {
-    background: url('https://i.postimg.cc/Y0CRFSdb/B2-C48252-27-B9-4-A4-D-8-F0-D-569-F24-FD98-F2.jpg') no-repeat center center/cover; /* Replace with your image path */
+    background: url('path-to-your-image.jpg') no-repeat center center/cover; /* Replace with the correct image path */
     color: white;
     text-align: center;
     padding: 80px 20px;
@@ -186,7 +187,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Adds a black overlay for better text visibility */
+    background: rgba(0, 0, 0, 0.6); /* Adds overlay */
     z-index: 1;
 }
 
@@ -203,9 +204,9 @@ body, html {
 
 .donate p {
     font-size: 1.2rem;
-    line-height: 1.8;
     max-width: 600px;
     margin: 0 auto 30px auto;
+    line-height: 1.8;
 }
 
 .donate-buttons {
@@ -217,15 +218,71 @@ body, html {
 .donate-buttons a {
     background-color: aqua;
     color: black;
-    font-size: 1.2rem;
     padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 .donate-buttons a:hover {
+    background-color: #00bcd4;
+}
+
+/* Donation Form Styling */
+.donation-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.donation-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.donation-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+}
+
+.donation-form .submit-button {
+    background-color: aqua;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.donation-form .submit-button:hover {
+    background-color: #00bcd4;
+}
+
+.back-button {
+    margin-top: 20px;
+    background-color: aqua;
+    color: black;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
     background-color: #00bcd4;
 }
 
