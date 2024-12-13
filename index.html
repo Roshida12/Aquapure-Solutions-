@@ -143,27 +143,21 @@
    
     </section>
 
-const leftBtn = document.getElementById('left-btn');
-const rightBtn = document.getElementById('right-btn');
-const track = document.querySelector('.carousel-track');
-
-const carouselItemWidth = track.children[0].offsetWidth;
-
-let currentPosition = 0;
-
-leftBtn.addEventListener('click', () => {
-    if (currentPosition < 0) {
-        currentPosition += carouselItemWidth;
-        track.style.transform = `translateX(${currentPosition}px)`;
+<script>
+    function scrollLeft() {
+        const carousel = document.querySelector('.priority-carousel');
+        carousel.scrollBy({ left: -300, behavior: 'smooth' });
     }
-});
 
-rightBtn.addEventListener('click', () => {
-    if (Math.abs(currentPosition) < (track.scrollWidth - track.offsetWidth)) {
-        currentPosition -= carouselItemWidth;
-        track.style.transform = `translateX(${currentPosition}px)`;
+    function scrollRight() {
+        const carousel = document.querySelector('.priority-carousel');
+        carousel.scrollBy({ left: 300, behavior: 'smooth' });
     }
-});
+
+    function navigateToPage(url) {
+        window.location.href = url; // Redirects to the specified URL
+    }
+</script>
 
 </body>
 </html>
