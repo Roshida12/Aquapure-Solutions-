@@ -182,46 +182,35 @@
     <!-- Your content here -->
     
    <!-- JavaScript Section -->
-    <script>
-       // JavaScript for "Our Priorities" carousel
-const leftButton = document.querySelector('.left-btn');
-const rightButton = document.querySelector('.right-btn');
-const carouselContainer = document.querySelector('.priority-carousel');
-const priorityItems = document.querySelectorAll('.priority-item');
-
-let currentIndex = 0;
-
-// Calculate item width dynamically
-const itemWidth = priorityItems[0].offsetWidth + 20; // Adjust based on CSS gap
-
-// Update carousel position function
-function updateCarouselPosition() {
-    carouselContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-}
-
-// Slide left
-leftButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateCarouselPosition();
+ <script>
+    function scrollLeft() {
+        const carousel = document.querySelector('.priority-carousel');
+        // Ensure the carousel exists
+        if (carousel) {
+            carousel.scrollBy({ left: -300, behavior: 'smooth' });
+        } else {
+            console.error("Carousel not found");
+        }
     }
-});
 
-// Slide right
-rightButton.addEventListener('click', () => {
-    const visibleItems = Math.floor(carouselContainer.offsetWidth / itemWidth);
-    const totalItems = priorityItems.length;
-
-    if (currentIndex < totalItems - visibleItems) {
-        currentIndex++;
-        updateCarouselPosition();
+    function scrollRight() {
+        const carousel = document.querySelector('.priority-carousel');
+        // Ensure the carousel exists
+        if (carousel) {
+            carousel.scrollBy({ left: 300, behavior: 'smooth' });
+        } else {
+            console.error("Carousel not found");
+        }
     }
-});
 
-// Optional: Add resizing handling
-window.addEventListener('resize', () => {
-    updateCarouselPosition();
-});
-    </script>
+    function navigateToPage(url) {
+        // Ensure the URL is a string and valid
+        if (typeof url === "string" && url.trim() !== "") {
+            window.location.href = url; // Redirects to the specified URL
+        } else {
+            console.error("Invalid URL provided");
+        }
+    }
+</script>
 </body>
 </html>
