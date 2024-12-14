@@ -129,20 +129,28 @@ body {
 
 /* Carousel Container */
 .priority-carousel {
-    display: flex;
-    overflow: hidden; /* Prevents items from spilling out */
-    gap: 20px; /* Matches the JavaScript gap */
-    padding: 10px;
-    scroll-snap-type: x mandatory; /* Enables smooth snapping */
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-.priority-item {
-    flex: 0 0 80%; /* Each item takes 80% of the container width */
-    max-width: 400px; /* Maximum size of the box */
-    border-radius: 15px;
-    overflow: hidden;
-    scroll-snap-align: center; /* Centers each box */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
+
+.carousel-item {
+    min-width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 
 .priority-item img {
     width: 100%;
