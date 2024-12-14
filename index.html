@@ -183,68 +183,35 @@
     <!-- Your content here -->
     
    <!-- JavaScript Section -->
- <script>
-  // JavaScript for "Our Priorities" carousel
-
-// Select carousel buttons and container
-const leftButton = document.querySelector('.left-btn');
-const rightButton = document.querySelector('.right-btn');
-const carouselContainer = document.querySelector('.priority-carousel');
-const priorityItems = document.querySelectorAll('.priority-item');
-
-let currentIndex = 0; // Track the current visible item index
-
-// Calculate item width dynamically
-function calculateItemWidth() {
-    const itemStyle = getComputedStyle(priorityItems[0]);
-    const itemWidth = priorityItems[0].offsetWidth; // Actual width of the item
-    const gap = parseInt(itemStyle.marginRight) || 0; // Get the gap (if any)
-    return itemWidth + gap; // Total width (item + gap)
-}
-
-// Update carousel position
-function updateCarouselPosition() {
-    const itemWidth = calculateItemWidth();
-    const maxOffset = (priorityItems.length - 1) * itemWidth;
-
-    // Ensure carousel doesn't scroll past available items
-    const offset = Math.min(currentIndex * itemWidth, maxOffset);
-    carouselContainer.style.transform = `translateX(-${offset}px)`;
-}
-
-// Handle scrolling left
-leftButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateCarouselPosition();
+<script>
+    // Scroll left function
+    function scrollLeft() {
+        const carousel = document.querySelector('.priority-carousel');
+        if (carousel) {
+            carousel.scrollBy({ left: -300, behavior: 'smooth' }); // Scroll left by 300px
+        } else {
+            console.error('Carousel element not found');
+        }
     }
-});
 
-// Handle scrolling right
-rightButton.addEventListener('click', () => {
-    const visibleItems = Math.floor(carouselContainer.offsetWidth / calculateItemWidth());
-    if (currentIndex < priorityItems.length - visibleItems) {
-        currentIndex++;
-        updateCarouselPosition();
+    // Scroll right function
+    function scrollRight() {
+        const carousel = document.querySelector('.priority-carousel');
+        if (carousel) {
+            carousel.scrollBy({ left: 300, behavior: 'smooth' }); // Scroll right by 300px
+        } else {
+            console.error('Carousel element not found');
+        }
     }
-});
 
-// Navigate to specific page when clicking on priority items
-function navigateToPage(url) {
-    if (typeof url === 'string' && url.trim() !== '') {
-        window.location.href = url;
-    } else {
-        console.error('Invalid URL provided');
+    // Navigate to a specific page
+    function navigateToPage(url) {
+        if (typeof url === 'string' && url.trim() !== '') {
+            window.location.href = url; // Redirect to the given URL
+        } else {
+            console.error('Invalid URL provided');
+        }
     }
-}
-
-// Attach click event listeners to priority items
-priorityItems.forEach((item, index) => {
-    const pages = ['priority1.html', 'priority2.html', 'priority3.html', 'priority4.html'];
-    item.addEventListener('click', () => navigateToPage(pages[index]));
-});
-    
-</script>
-   
+</script>  
 </body>
 </html>
