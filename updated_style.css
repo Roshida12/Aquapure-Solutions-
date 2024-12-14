@@ -175,6 +175,7 @@ body {
 }
 
 /* Navigation Buttons */
+/* Navigation Buttons */
 button.left-btn, button.right-btn {
     position: absolute;
     top: 50%; /* Center vertically */
@@ -187,20 +188,26 @@ button.left-btn, button.right-btn {
     cursor: pointer; /* Pointer cursor on hover */
     z-index: 1000; /* Ensure it’s above other elements */
     font-size: 1.5rem; /* Increase arrow size */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
 }
 
 button.left-btn {
-    left: 20px; /* Adjust the left button position */
+    left: 10px; /* Adjust the left button position */
 }
 
 button.right-btn {
-    right: 20px; /* Adjust the right button position */
+    right: 10px; /* Adjust the right button position */
 }
 
 button.left-btn:hover, button.right-btn:hover {
     background-color: aqua; /* Change background color on hover */
     color: black; /* Change text color on hover */
+}
+
+/* Carousel Container Fix */
+.carousel-container {
+    position: relative; /* Ensure buttons are positioned relative to this */
+    overflow: hidden; /* Prevent items from overflowing */
+    width: 100%; /* Full width */
 }
 
 /* Donate Section */
