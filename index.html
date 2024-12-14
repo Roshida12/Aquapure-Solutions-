@@ -191,39 +191,24 @@ const priorityItems = document.querySelectorAll('.priority-item');
 
 let currentIndex = 0;
 
+// Calculate item width dynamically
+const itemWidth = priorityItems[0].offsetWidth + 20; // Add margin or gap if necessary
+
 // Slide left
 leftButton.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
-        updateCarousel();
+        carouselContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
     }
 });
 
 // Slide right
 rightButton.addEventListener('click', () => {
-    if (currentIndex < priorityItems.length - 1) {
+    const totalItems = priorityItems.length;
+    if (currentIndex < totalItems - 1) {
         currentIndex++;
-        updateCarousel();
+        carouselContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
     }
-});
-
-// Update carousel position
-function updateCarousel() {
-    const itemWidth = document.querySelector('.priority-item').offsetWidth + 20; // Adjust for padding
-carouselContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-}
-
-// Navigate to specific pages when clicking on items
-function navigateToPage(page) {
-    window.location.href = page; // Redirect to the specified page
-}
-
-// Attach click events to priority items
-priorityItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        const pages = ['priority1.html', 'priority2.html', 'priority3.html', 'priority4.html'];
-        navigateToPage(pages[index]);
-    });
 });
     </script>
 </body>
