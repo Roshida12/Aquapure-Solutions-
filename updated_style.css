@@ -44,17 +44,21 @@ body, html {
 }
 
 /* Navigation Links */
-.nav-links {
+..nav-links {
     display: flex;
-    gap: 20px; /* Space between navigation links */
+    gap: 15px; /* Adjust spacing between links */
+    justify-content: flex-end; /* Align links to the right */
 }
 
 .nav-links a {
-    color: white;
+    color: white; /* Ensure text is white */
     text-decoration: none; /* Remove underline */
     font-size: 16px; /* Adjust font size */
-    padding: 5px 10px; /* Add padding around links */
-    transition: color 0.3s ease; /* Smooth transition for hover */
+    padding: 5px 10px; /* Add spacing around links */
+}
+
+.nav-links a:last-child {
+    margin-right: 20px; /* Adjusts the right margin of the last link (Contact Us) */
 }
 
 .nav-links a:hover {
