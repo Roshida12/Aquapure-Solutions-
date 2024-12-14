@@ -134,7 +134,10 @@ body {
     gap: 20px; /* Matches the gap used in JavaScript */
     scroll-behavior: smooth; /* Enables smooth scrolling */
     transition: transform 0.3s ease-in-out; /* Smooth transform */
+    width: 100%; /* Ensure it doesn't overflow */
 }
+
+
 
 .priority-carousel::-webkit-scrollbar {
     display: none; /* Hides scrollbar in WebKit browsers */
@@ -143,17 +146,16 @@ body {
 /* Priority Item Styling */
 /* Individual Boxes */
 .priority-item {
-    flex: 0 0 80%; /* Box takes up 80% of the viewport width */
-    max-width: 400px; /* Medium-sized box */
-    height: 300px; /* Adjust height as needed */
-    background: #e6f7ff; /* Replace with a background image or color */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    flex: 0 0 80%; /* Adjust based on JavaScript logic */
+    max-width: 300px; /* Maximum size for each box */
+    margin-right: 20px; /* Matches the JavaScript gap */
+    border-radius: 10px; /* Optional rounded corners */
+    background-color: #1a1a1a; /* Background color */
+    color: white; /* Text color */
+    overflow: hidden;
     position: relative;
-    scroll-snap-align: center; /* Centers each box while scrolling */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: center;
 }
-
 
 .priority-item img {
     width: 100%;
