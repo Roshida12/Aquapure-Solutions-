@@ -8,14 +8,21 @@ body, html {
 }
 
 /* Navigation Bar */
+/* Navigation Bar Styling */
 .nav {
     display: flex;
-    justify-content: space-between; /* Space between left (logo) and right (links) */
-    align-items: center; /* Align items vertically */
-    padding: 10px 20px; /* Add padding around the navigation bar */
-    background-color: transparent; /* Navigation bar background color */
-    color: white; /* Text color */
-    border-bottom: 1px solid white; /* Optional: Border at the bottom of the nav */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Vertically align items */
+    padding: 10px 20px; /* Padding inside the nav bar */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: white; /* Default text color */
+    border-bottom: 1px solid white; /* Optional: White border at the bottom */
+    position: fixed; /* Make the nav bar fixed at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Align it to the top of the page */
+    z-index: 1000; /* Ensure it stays above other elements */
+    backdrop-filter: blur(10px); /* Add a slight blur effect */
+    transition: background-color 0.3s ease; /* Smooth transition for scroll effect */
 }
 
 /* Logo and Website Name */
@@ -25,21 +32,21 @@ body, html {
 }
 
 .logo img {
-    height: 40px; /* Adjust the logo size */
+    height: 40px; /* Adjust logo size */
     width: auto;
     margin-right: 10px; /* Space between logo and text */
 }
 
 .website-name {
-    font-size: 20px; /* Adjust font size for the website name */
-    font-weight: bold; /* Make the name bold */
-    color: aqua;
+    font-size: 20px; /* Font size for the website name */
+    font-weight: bold; /* Make the text bold */
+    color: aqua; /* Aqua color for the website name */
 }
 
 /* Navigation Links */
 .nav-links {
     display: flex;
-    gap: 20px; /* Space between each link */
+    gap: 20px; /* Space between navigation links */
 }
 
 .nav-links a {
@@ -47,25 +54,16 @@ body, html {
     text-decoration: none; /* Remove underline */
     font-size: 16px; /* Adjust font size */
     padding: 5px 10px; /* Add padding around links */
-    transition: color 0.3s; /* Smooth transition for hover effect */
+    transition: color 0.3s ease; /* Smooth transition for hover */
 }
 
 .nav-links a:hover {
-    color: aqua; /* Change color when hovering */
+    color: aqua; /* Aqua color on hover */
 }
 
-.logo {
-    height: 35px; /* Small enough to fit nicely, adjust as needed */
-    width: auto;  /* Keeps the image's aspect ratio intact */
-    margin-right: 15px; /* Adds some space between the logo and navigation links */
-    display: inline-block; /* Keeps it inline with navigation links */
-    vertical-align: middle; /* Aligns the logo with the nav links */
-}
-.nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 16px;
+/* Add Spacing Below Fixed Nav Bar */
+body {
+    padding-top: 60px; /* Adjust for fixed nav bar height */
 }
 
 .homepage {
