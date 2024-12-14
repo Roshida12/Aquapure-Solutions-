@@ -139,7 +139,8 @@ body {
 }
 
 .priority-carousel::-webkit-scrollbar {
-    display: none; /* Hides scrollbar in WebKit browsers */
+    display: flex; /* Hides scrollbar in WebKit browsers */
+    transition: transform 0.3s ease-in-out; 
 }
 
 /* Priority Item Styling */
