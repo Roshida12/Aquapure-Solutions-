@@ -184,33 +184,18 @@
     
    <!-- JavaScript Section -->
 <script>
-    // Scroll left function
     function scrollLeft() {
         const carousel = document.querySelector('.priority-carousel');
-        if (carousel) {
-            carousel.scrollBy({ left: -300, behavior: 'smooth' }); // Scroll left by 300px
-        } else {
-            console.error('Carousel element not found');
-        }
+        carousel.scrollBy({ left: -300, behavior: 'smooth' });
     }
 
-    // Scroll right function
     function scrollRight() {
         const carousel = document.querySelector('.priority-carousel');
-        if (carousel) {
-            carousel.scrollBy({ left: 300, behavior: 'smooth' }); // Scroll right by 300px
-        } else {
-            console.error('Carousel element not found');
-        }
+        carousel.scrollBy({ left: 300, behavior: 'smooth' });
     }
 
-    // Navigate to a specific page
     function navigateToPage(url) {
-        if (typeof url === 'string' && url.trim() !== '') {
-            window.location.href = url; // Redirect to the given URL
-        } else {
-            console.error('Invalid URL provided');
-        }
+        window.location.href = url; // Redirects to the specified URL
     }
 </script>  
 </body>
