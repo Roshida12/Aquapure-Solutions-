@@ -7,18 +7,51 @@ body, html {
     scroll-behavior: smooth;
 }
 
+/* Navigation Bar */
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: transparent;
-    border-bottom: 1px solid white;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    z-index: 1000;
+    justify-content: space-between; /* Space between left (logo) and right (links) */
+    align-items: center; /* Align items vertically */
+    padding: 10px 20px; /* Add padding around the navigation bar */
+    background-color: black; /* Navigation bar background color */
+    color: white; /* Text color */
+    border-bottom: 1px solid white; /* Optional: Border at the bottom of the nav */
+}
+
+/* Logo and Website Name */
+.logo {
+    display: flex;
+    align-items: center; /* Center logo and text vertically */
+}
+
+.logo img {
+    height: 40px; /* Adjust the logo size */
+    width: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.website-name {
+    font-size: 20px; /* Adjust font size for the website name */
+    font-weight: bold; /* Make the name bold */
+    color: white;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px; /* Space between each link */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Adjust font size */
+    padding: 5px 10px; /* Add padding around links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+    color: aqua; /* Change color when hovering */
 }
 
 .logo {
