@@ -233,7 +233,37 @@ body, html {
 
 00bcd4;
 }
+/* Donation Form Section Improvements */
+.donation-form {
+    max-width: 400px;
+    margin: 50px auto; /* Adjust spacing from top and bottom */
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
 
+.donation-form input {
+    margin-bottom: 20px; /* Increased spacing between form fields */
+}
+
+.donation-form .submit-button {
+    width: 100%; /* Ensures button spans the form width */
+    margin-bottom: 15px; /* Add spacing between buttons */
+}
+
+.back-button {
+    width: 100%; /* Ensures consistency with "Donate" button */
+    display: inline-block;
+    text-align: center;
+}
+
+.donate-page {
+    padding: 50px 20px; /* Reduce excessive white space */
+    text-align: center;
+    color: white;
+    background-color: black; /* Ensures consistent background */
+}
 
 
 /* Our Impact Section */
