@@ -141,13 +141,19 @@ body {
 }
 
 /* Priority Item Styling */
+/* Individual Boxes */
 .priority-item {
-    flex: 0 0 80%; /* Adjust width as needed */
-    max-width: 300px; /* Prevent oversized items */
-    margin-right: 20px; /* Matches the JavaScript gap */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Prevent content overflow */
+    flex: 0 0 80%; /* Box takes up 80% of the viewport width */
+    max-width: 400px; /* Medium-sized box */
+    height: 300px; /* Adjust height as needed */
+    background: #e6f7ff; /* Replace with a background image or color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: relative;
+    scroll-snap-align: center; /* Centers each box while scrolling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .priority-item img {
     width: 100%;
