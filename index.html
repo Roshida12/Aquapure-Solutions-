@@ -31,7 +31,7 @@
 
     <div class="page-divider"></div>
 
-  <section id="priorities" class="priorities">
+<section id="priorities" class="priorities">
     <h2>Our <span style="color: #28a745;">Priorities</span></h2>
     <p>Swipe left or right to explore each priority and click to learn more.</p>
     <div class="carousel-container">
@@ -183,7 +183,8 @@
 // JavaScript for "Our Priorities" carousel
 const leftButton = document.querySelector('.left-btn');
 const rightButton = document.querySelector('.right-btn');
-const carouselContainer = document.querySelector('.priority-carousel'); // Updated to match the correct container
+const carouselContainer = document.querySelector('.priority-carousel');
+const totalItems = document.querySelectorAll('.priority-item').length;
 
 let currentIndex = 0;
 
@@ -197,7 +198,6 @@ leftButton.addEventListener('click', () => {
 
 // Slide right
 rightButton.addEventListener('click', () => {
-    const totalItems = document.querySelectorAll('.priority-item').length;
     if (currentIndex < totalItems - 1) {
         currentIndex++;
         carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
