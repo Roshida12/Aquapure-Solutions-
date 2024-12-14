@@ -65,10 +65,13 @@
             </div>
         </div>
     </div>
-    <!-- Navigation Buttons -->
-<button class="carousel-nav left" onclick="scrollLeft()">←</button>
-    <button class="carousel-nav right" onclick="scrollRight()">→</button>
-</section>
+    <!-- Navigation Buttons --><button class="left-btn" aria-label="Slide Left">
+    &#9664; <!-- Left Arrow Icon -->
+</button>
+<button class="right-btn" aria-label="Slide Right">
+    &#9654; <!-- Right Arrow Icon -->
+</button>
+   
      <!-- Donation Section -->
 <section id="donate" class="donate">
     <div class="donate-content">
@@ -175,21 +178,35 @@
    
     </section>
 
-<script>
-    function scrollLeft() {
-        const carousel = document.querySelector('.priority-carousel');
-        carousel.scrollBy({ left: -300, behavior: 'smooth' });
-    }
+<body>
+    <!-- Your content here -->
+    
+    <script>
+        // JavaScript for "Our Priorities" carousel
+        const leftButton = document.querySelector('.left-btn');
+        const rightButton = document.querySelector('.right-btn');
+        const carouselContainer = document.querySelector('.carousel-container');
 
-    function scrollRight() {
-        const carousel = document.querySelector('.priority-carousel');
-        carousel.scrollBy({ left: 300, behavior: 'smooth' });
-    }
+        let currentIndex = 0;
 
-    function navigateToPage(url) {
-        window.location.href = url; // Redirects to the specified URL
-    }
-</script>
+        // Slide left
+        leftButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        });
+
+        // Slide right
+        rightButton.addEventListener('click', () => {
+            const totalItems = document.querySelectorAll('.carousel-item').length;
+            if (currentIndex < totalItems - 1) {
+                currentIndex++;
+                carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        });
+    </script>
+</body>
 
 </body>
 </html>
