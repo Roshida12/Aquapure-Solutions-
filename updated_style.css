@@ -130,30 +130,18 @@ body {
 /* Carousel Container */
 .priority-carousel {
     display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 20px;
+    overflow: hidden; /* Prevents items from spilling out */
+    gap: 20px; /* Matches the JavaScript gap */
     padding: 10px;
     scroll-snap-type: x mandatory; /* Enables smooth snapping */
-    scrollbar-width: none; /* Hides scrollbar */
-    cursor: grab; /* Cursor indicates swiping */
-    max-width; 100%; 
 }
 
-.priority-carousel::-webkit-scrollbar {
-    display: flex; /* Hides scrollbar in WebKit browsers */
-    transition: transform 0.3s ease-in-out; 
-}
-
-/* Priority Item Styling */
 .priority-item {
-    flex: 0 0 80%; /* Box size: 80% of the screen width */
-    max-width: 400px;
-    position: relative;
+    flex: 0 0 80%; /* Each item takes 80% of the container width */
+    max-width: 400px; /* Maximum size of the box */
     border-radius: 15px;
     overflow: hidden;
     scroll-snap-align: center; /* Centers each box */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow */
-    cursor: pointer;
 }
 
 .priority-item img {
