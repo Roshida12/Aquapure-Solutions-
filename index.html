@@ -180,30 +180,31 @@
 <body>
     <!-- Your content here -->
     
-// JavaScript for "Our Priorities" carousel
-const leftButton = document.querySelector('.left-btn');
-const rightButton = document.querySelector('.right-btn');
-const carouselContainer = document.querySelector('.priority-carousel');
-const totalItems = document.querySelectorAll('.priority-item').length;
+   <!-- JavaScript Section -->
+    <script>
+        // JavaScript for "Our Priorities" carousel
+        const leftButton = document.querySelector('.left-btn');
+        const rightButton = document.querySelector('.right-btn');
+        const carouselContainer = document.querySelector('.priority-carousel');
+        const totalItems = document.querySelectorAll('.priority-item').length;
 
-let currentIndex = 0;
+        let currentIndex = 0;
 
-// Slide left
-leftButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-});
+        // Slide left
+        leftButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        });
 
-// Slide right
-rightButton.addEventListener('click', () => {
-    if (currentIndex < totalItems - 1) {
-        currentIndex++;
-        carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-});
-</body>
-
+        // Slide right
+        rightButton.addEventListener('click', () => {
+            if (currentIndex < totalItems - 1) {
+                currentIndex++;
+                carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        });
+    </script>
 </body>
 </html>
