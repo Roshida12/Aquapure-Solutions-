@@ -184,28 +184,47 @@
    <!-- JavaScript Section -->
     <script>
         // JavaScript for "Our Priorities" carousel
-        const leftButton = document.querySelector('.left-btn');
-        const rightButton = document.querySelector('.right-btn');
-        const carouselContainer = document.querySelector('.priority-carousel');
-        const totalItems = document.querySelectorAll('.priority-item').length;
+const leftButton = document.querySelector('.left-btn');
+const rightButton = document.querySelector('.right-btn');
+const carouselContainer = document.querySelector('.priority-carousel');
+const priorityItems = document.querySelectorAll('.priority-item');
 
-        let currentIndex = 0;
+let currentIndex = 0;
 
-        // Slide left
-        leftButton.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }
-        });
+// Slide left
+leftButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+    }
+});
 
-        // Slide right
-        rightButton.addEventListener('click', () => {
-            if (currentIndex < totalItems - 1) {
-                currentIndex++;
-                carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }
-        });
+// Slide right
+rightButton.addEventListener('click', () => {
+    if (currentIndex < priorityItems.length - 1) {
+        currentIndex++;
+        updateCarousel();
+    }
+});
+
+// Update carousel position
+function updateCarousel() {
+    const itemWidth = priorityItems[0].offsetWidth + 20; // Include the gap between items
+    carouselContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+}
+
+// Navigate to specific pages when clicking on items
+function navigateToPage(page) {
+    window.location.href = page; // Redirect to the specified page
+}
+
+// Attach click events to priority items
+priorityItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        const pages = ['priority1.html', 'priority2.html', 'priority3.html', 'priority4.html'];
+        navigateToPage(pages[index]);
+    });
+});
     </script>
 </body>
 </html>
