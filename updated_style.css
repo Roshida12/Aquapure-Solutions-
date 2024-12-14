@@ -171,9 +171,8 @@ body, html {
 }
 
 /* Donate Section */
-/* Donate Section */
 .donate {
-    background: url('https://i.postimg.cc/Y0CRFSdb/B2-C48252-27-B9-4-A4-D-8-F0-D-569-F24-FD98-F2.jpg') no-repeat center center/cover; /* Replace with the correct image path */
+    background: url('path-to-your-image.jpg') no-repeat center center/cover; /* Replace with the correct image path */
     color: white;
     text-align: center;
     padding: 80px 20px; /* Adjust padding as needed */
@@ -231,41 +230,61 @@ body, html {
     background-color: #00bcd4;
 }
 
-00bcd4;
-}
-/* Donation Form Section Improvements */
+/* Donation Form Styling */
 .donation-form {
     max-width: 400px;
-    margin: 50px auto; /* Adjust spacing from top and bottom */
+    margin: 0 auto;
     background-color: #1a1a1a;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+.donation-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
 .donation-form input {
-    margin-bottom: 20px; /* Increased spacing between form fields */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
 }
 
 .donation-form .submit-button {
-    width: 100%; /* Ensures button spans the form width */
-    margin-bottom: 15px; /* Add spacing between buttons */
+    background-color: aqua;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.donation-form .submit-button:hover {
+    background-color: #00bcd4;
 }
 
 .back-button {
-    width: 100%; /* Ensures consistency with "Donate" button */
-    display: inline-block;
-    text-align: center;
+    margin-top: 20px;
+    background-color: aqua;
+    color: black;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-.donate-page {
-    padding: 50px 20px; /* Reduce excessive white space */
-    text-align: center;
-    color: white;
-    background-color: black; /* Ensures consistent background */
+.back-button:hover {
+    background-color: #00bcd4;
 }
-
-
 /* Our Impact Section */
 .impact {
     background-color: black;
