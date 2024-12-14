@@ -129,26 +129,31 @@ body {
 
 /* Carousel Container */
 .priority-carousel {
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px;
+    padding: 10px;
+    scroll-snap-type: x mandatory; /* Enables smooth snapping */
+    scrollbar-width: none; /* Hides scrollbar */
+    cursor: grab; /* Cursor indicates swiping */
 }
 
-.carousel-item {
-    min-width: 300px;
-    margin: 10px;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.priority-carousel::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in WebKit browsers */
 }
+
+/* Priority Item Styling */
+.priority-item {
+    flex: 0 0 80%; /* Box size: 80% of the screen width */
+    max-width: 400px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    scroll-snap-align: center; /* Centers each box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow */
+    cursor: pointer;
+}
+
 
 
 
