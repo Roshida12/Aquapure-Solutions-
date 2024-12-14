@@ -183,34 +183,62 @@
     
    <!-- JavaScript Section -->
  <script>
-    function scrollLeft() {
-        const carousel = document.querySelector('.priority-carousel');
-        // Ensure the carousel exists
-        if (carousel) {
-            carousel.scrollBy({ left: -300, behavior: 'smooth' });
-        } else {
-            console.error("Carousel not found");
-        }
-    }
+    // JavaScript for "Our Priorities" carousel
 
-    function scrollRight() {
-        const carousel = document.querySelector('.priority-carousel');
-        // Ensure the carousel exists
-        if (carousel) {
-            carousel.scrollBy({ left: 300, behavior: 'smooth' });
-        } else {
-            console.error("Carousel not found");
-        }
-    }
+// Selectors for buttons and carousel
+const leftButton = document.querySelector('.left-btn');
+const rightButton = document.querySelector('.right-btn');
+const carouselContainer = document.querySelector('.priority-carousel');
+const priorityItems = document.querySelectorAll('.priority-item');
 
-    function navigateToPage(url) {
-        // Ensure the URL is a string and valid
-        if (typeof url === "string" && url.trim() !== "") {
-            window.location.href = url; // Redirects to the specified URL
-        } else {
-            console.error("Invalid URL provided");
-        }
+let currentIndex = 0; // Current active item index
+
+// Calculate the width of a single priority item, including gaps
+function calculateItemWidth() {
+    const itemStyle = getComputedStyle(priorityItems[0]);
+    const itemWidth = priorityItems[0].offsetWidth; // Actual width of the item
+    const gap = parseInt(itemStyle.marginRight); // Get the right margin (gap between items)
+    return itemWidth + gap; // Total width (item + gap)
+}
+
+// Update the carousel position
+function updateCarouselPosition() {
+    const itemWidth = calculateItemWidth();
+    carouselContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+}
+
+// Scroll left
+leftButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateCarouselPosition();
     }
+});
+
+// Scroll right
+rightButton.addEventListener('click', () => {
+    const visibleItems = Math.floor(carouselContainer.offsetWidth / calculateItemWidth());
+    if (currentIndex < priorityItems.length - visibleItems) {
+        currentIndex++;
+        updateCarouselPosition();
+    }
+});
+
+// Navigate to a specific page
+function navigateToPage(url) {
+    if (typeof url === 'string' && url.trim() !== '') {
+        window.location.href = url;
+    } else {
+        console.error('Invalid URL provided');
+    }
+}
+
+// Attach click event to each priority item for navigation
+priorityItems.forEach((item, index) => {
+    const pages = ['priority1.html', 'priority2.html', 'priority3.html', 'priority4.html'];
+    item.addEventListener('click', () => navigateToPage(pages[index]));
+});
 </script>
+   
 </body>
 </html>
