@@ -172,7 +172,7 @@ body, html {
 
 /* Donate Section */
 .donate {
-    background: url('https://i.postimg.cc/Y0CRFSdb/B2-C48252-27-B9-4-A4-D-8-F0-D-569-F24-FD98-F2.jpg') no-repeat center center/cover; /* Replace with the correct image path */
+    background: url('https://i.postimg.cc/8PSFCYnn/8033-CF96-08-D5-44-E6-B8-C6-CFA87189-EB0-E.jpg') no-repeat center center/cover; /* Replace with the correct image path */
     color: white;
     text-align: center;
     padding: 80px 20px; /* Adjust padding as needed */
@@ -231,14 +231,8 @@ body, html {
 }
 
 /* Donation Form Styling */
-.donation-form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
+
+o
 
 .donation-form label {
     display: block;
