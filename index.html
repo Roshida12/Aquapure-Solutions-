@@ -209,8 +209,8 @@ rightButton.addEventListener('click', () => {
 
 // Update carousel position
 function updateCarousel() {
-    const itemWidth = priorityItems[0].offsetWidth + 20; // Include the gap between items
-    carouselContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    const itemWidth = document.querySelector('.priority-item').offsetWidth + 20; // Adjust for padding
+carouselContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
 }
 
 // Navigate to specific pages when clicking on items
