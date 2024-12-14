@@ -136,6 +136,7 @@ body {
     scroll-snap-type: x mandatory; /* Enables smooth snapping */
     scrollbar-width: none; /* Hides scrollbar */
     cursor: grab; /* Cursor indicates swiping */
+    max-width; 100%; 
 }
 
 .priority-carousel::-webkit-scrollbar {
