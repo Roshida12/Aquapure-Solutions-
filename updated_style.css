@@ -130,12 +130,10 @@ body {
 /* Carousel Container */
 .priority-carousel {
     display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 20px;
-    padding: 10px;
-    scroll-snap-type: x mandatory; /* Enables smooth snapping */
-    scrollbar-width: none; /* Hides scrollbar */
-    cursor: grab; /* Cursor indicates swiping */
+    overflow: hidden; /* Prevent items from spilling outside */
+    gap: 20px; /* Matches the gap used in JavaScript */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    transition: transform 0.3s ease-in-out; /* Smooth transform */
 }
 
 .priority-carousel::-webkit-scrollbar {
@@ -144,18 +142,12 @@ body {
 
 /* Priority Item Styling */
 .priority-item {
-    flex: 0 0 80%; /* Box size: 80% of the screen width */
-    max-width: 400px;
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    scroll-snap-align: center; /* Centers each box */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow */
-    cursor: pointer;
+    flex: 0 0 80%; /* Adjust width as needed */
+    max-width: 300px; /* Prevent oversized items */
+    margin-right: 20px; /* Matches the JavaScript gap */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
 }
-
-
-
 
 .priority-item img {
     width: 100%;
