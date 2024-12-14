@@ -130,32 +130,30 @@ body {
 /* Carousel Container */
 .priority-carousel {
     display: flex;
-    overflow: hidden; /* Prevent items from spilling outside */
-    gap: 20px; /* Matches the gap used in JavaScript */
-    scroll-behavior: smooth; /* Enables smooth scrolling */
-    transition: transform 0.3s ease-in-out; /* Smooth transform */
-    width: 100%; /* Ensure it doesn't overflow */
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Hides scrollbar */
 }
-
-
 
 .priority-carousel::-webkit-scrollbar {
     display: none; /* Hides scrollbar in WebKit browsers */
 }
 
 /* Priority Item Styling */
-/* Individual Boxes */
 .priority-item {
-    flex: 0 0 80%; /* Adjust based on JavaScript logic */
-    max-width: 300px; /* Maximum size for each box */
-    margin-right: 20px; /* Matches the JavaScript gap */
-    border-radius: 10px; /* Optional rounded corners */
-    background-color: #1a1a1a; /* Background color */
-    color: white; /* Text color */
-    overflow: hidden;
+    flex: 0 0 80%; /* Adjust box size */
+    max-width: 400px;
     position: relative;
+    border-radius: 15px;
+    overflow: hidden;
     scroll-snap-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
+
+
 
 .priority-item img {
     width: 100%;
