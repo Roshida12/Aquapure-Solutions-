@@ -128,31 +128,26 @@ body {
     margin-bottom: 20px;
 }
 
-/* Carousel Container */
-.priority-carousel {
-    display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 20px;
-    padding: 10px;
-    scroll-snap-type: x mandatory; /* Enables smooth snapping */
-    scrollbar-width: none; /* Hides scrollbar */
-    cursor: grab; /* Cursor indicates swiping */
-}
-
-.priority-carousel::-webkit-scrollbar {
-    display: none; /* Hides scrollbar in WebKit browsers */
-}
-
-/* Priority Item Styling */
-.priority-item {
-    flex: 0 0 80%; /* Box size: 80% of the screen width */
-    max-width: 400px;
+/* Carousel Container Fix */
+.carousel-container {
     position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    scroll-snap-align: center; /* Centers each box */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow */
-    cursor: pointer;
+    overflow: hidden; /* Hides the items outside the visible area */
+    width: 100%; /* Full width for the carousel */
+}
+
+/* Carousel Items */
+.priority-carousel {
+    display: flex; /* Arrange items in a row for sliding */
+    transition: transform 0.3s ease-in-out; /* Smooth sliding */
+    width: calc(100% * 4); /* Adjust to the number of items (4 items in your case) */
+}
+
+.priority-item {
+    flex: 0 0 100%; /* Each item takes up 100% of the container width */
+    text-align: center;
+    background: #f0f0f0; /* Optional background */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .priority-item img {
