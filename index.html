@@ -183,7 +183,7 @@
     
    <!-- JavaScript Section -->
  <script>
-   // JavaScript for "Our Priorities" carousel
+  // JavaScript for "Our Priorities" carousel
 
 // Select carousel buttons and container
 const leftButton = document.querySelector('.left-btn');
@@ -193,7 +193,7 @@ const priorityItems = document.querySelectorAll('.priority-item');
 
 let currentIndex = 0; // Track the current visible item index
 
-// Calculate item width (including gaps)
+// Calculate item width dynamically
 function calculateItemWidth() {
     const itemStyle = getComputedStyle(priorityItems[0]);
     const itemWidth = priorityItems[0].offsetWidth; // Actual width of the item
