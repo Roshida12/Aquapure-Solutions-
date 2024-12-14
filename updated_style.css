@@ -130,11 +130,12 @@ body {
 /* Carousel Container */
 .priority-carousel {
     display: flex;
-    overflow-x: auto;
+    overflow-x: auto; /* Enable horizontal scrolling */
     gap: 20px;
     padding: 10px;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory; /* Enables smooth snapping */
     scrollbar-width: none; /* Hides scrollbar */
+    cursor: grab; /* Cursor indicates swiping */
 }
 
 .priority-carousel::-webkit-scrollbar {
@@ -143,17 +144,15 @@ body {
 
 /* Priority Item Styling */
 .priority-item {
-    flex: 0 0 80%; /* Adjust box size */
+    flex: 0 0 80%; /* Box size: 80% of the screen width */
     max-width: 400px;
     position: relative;
     border-radius: 15px;
     overflow: hidden;
-    scroll-snap-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center; /* Centers each box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow */
     cursor: pointer;
 }
-
-
 
 .priority-item img {
     width: 100%;
@@ -175,31 +174,34 @@ body {
 }
 
 /* Navigation Buttons */
-button.left-btn, button.right-btn {
+.carousel-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: black;
+    background-color: aqua; /* Buttons set to aqua blue */
     color: white;
-    border: 2px solid white;
-    padding: 10px 15px;
+    border: none;
     border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    z-index: 1000;
     font-size: 1.5rem;
+    z-index: 10;
 }
 
-button.left-btn {
+.carousel-nav.left {
     left: 10px;
 }
 
-button.right-btn {
+.carousel-nav.right {
     right: 10px;
 }
 
-button.left-btn:hover, button.right-btn:hover {
-    background-color: aqua;
-    color: black;
+.carousel-nav:hover {
+    background-color: #00bcd4; /* Darker aqua on hover */
 }
 
 /* Donate Section */
