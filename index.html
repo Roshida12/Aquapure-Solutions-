@@ -186,17 +186,23 @@
 <script>
     function scrollLeft() {
         const carousel = document.querySelector('.priority-carousel');
-        carousel.scrollBy({ left: -300, behavior: 'smooth' });
+        const itemWidth = carousel.querySelector('.priority-item').offsetWidth + 20; // Add gap (20px)
+        carousel.scrollBy({ left: -itemWidth, behavior: 'smooth' });
     }
 
     function scrollRight() {
         const carousel = document.querySelector('.priority-carousel');
-        carousel.scrollBy({ left: 300, behavior: 'smooth' });
+        const itemWidth = carousel.querySelector('.priority-item').offsetWidth + 20; // Add gap (20px)
+        carousel.scrollBy({ left: itemWidth, behavior: 'smooth' });
     }
 
     function navigateToPage(url) {
-        window.location.href = url; // Redirects to the specified URL
+        if (typeof url === 'string' && url.trim() !== '') {
+            window.location.href = url; // Redirects to the specified URL
+        } else {
+            console.error('Invalid URL provided');
+        }
     }
-</script>  
+</script>
 </body>
 </html>
