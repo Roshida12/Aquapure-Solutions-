@@ -263,53 +263,86 @@ body {
 
 /* Donation Form Styling */
 
-o
+/* Full Page Black Background for Donation Page */
+body.donation-page {
+    background-color: black; /* Black background */
+    color: white; /* White text for contrast */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Clean, readable font */
+}
+
+/* Donation Form Section */
+.donation-form-section {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Donation Form Styling */
+.donation-form {
+    max-width: 400px; /* Limit form width */
+    margin: 20px auto; /* Center form horizontally */
+    background-color: #1a1a1a; /* Dark gray background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    color: white; /* White text inside the form */
+}
 
 .donation-form label {
     display: block;
+    text-align: left;
     margin-bottom: 5px;
-    color: white;
+    font-size: 1rem;
 }
 
 .donation-form input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: none;
+    border: 1px solid #555;
     border-radius: 5px;
-    background-color: black;
+    background-color: #444; /* Slightly lighter gray */
     color: white;
-    font-size: 1rem;
 }
 
-.donation-form .submit-button {
+/* Buttons Styling */
+.submit-button {
+    width: 100%;
     background-color: aqua;
     color: black;
     padding: 15px;
+    border: none;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Space between Donate and Back buttons */
 }
 
-.donation-form .submit-button:hover {
+.submit-button:hover {
     background-color: #00bcd4;
 }
 
 .back-button {
-    margin-top: 20px;
-    background-color: aqua;
-    color: black;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 5px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: black;
+    color: aqua;
     text-decoration: none;
-    transition: background-color 0.3s;
+    font-size: 1rem;
+    border: 2px solid aqua;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .back-button:hover {
-    background-color: #00bcd4;
+    background-color: aqua;
+    color: black;
 }
+
 /* Our Impact Section */
 .impact {
     background-color: black;
